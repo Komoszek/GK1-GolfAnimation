@@ -1,0 +1,33 @@
+Grafika Komputerowa 1, Projekt 4 - Animacja Golf
+Autor: Łukasz Komoszyński
+
+====== Opis Projektu ======
+Projekt ten jest małą, nieskończoną animacją piłki golfowej, która próbuje dolecieć do "dołka"
+(środek planszy), ale zawsze ląduje na boku górki, z którego ześlizguje się i toczy się do pewnej odległości od
+górki. Na kulce znajduje się reflektor, który zawsze świeci trochę przed kulką, w kierunku środka planszy. Oprócz
+niego na planszy znajdują się dwa kolorowe reflektory, magentowy i cyjanowy, które świecą na znajdujące się pod 
+nimi sfery. Gdy kamera porusza się wraz z kamerą to pojawia się mgła.
+
+====== Rozwiązanie Techniczne ======
+Projekt ten napisany został na CPU korzystając z C# (.NET Core 5) i WinForms. Scena rysowana jest na bitmapie,
+będącej tłem pictureboxa. Animacja kulki polega na płynnym przejściu od pozycji startowej kulki przez wylosowaną
+pozycję kulki na ściance (przez wylosowaną maksymalną wysokość kulki) aż do końcowej pozycji kulki oddalonej od
+górki.
+
+====== "User Manual" ======
+Cieniowanie - W tym projekcie zostały zaimplementowane 3 typy cieniowanie:
+			- Cieniowanie Stałe
+			- Cieniowanie Gourauda
+			- Cieniowanie Phonga
+	      W celu zmiany cieniowania należy kliknąć na jeden z radio buttonów
+	      w groupboxie podpisanym "Shading" lub kliknąć na klawiaturze klawisz "S".
+
+Kamera - Przygotowano 3 różne kamery:
+		- nieruchoma patrząca na scenę (static)
+		- nieruchoma śledząca piłkę golfową (tracking ball)
+		- umieszczona zaraz za piłką golfową, patrząca na środek pola (following ball)
+	      W celu zmiany kamery należy kliknąć na jeden z radiobuttownów w groupboxie 
+	      podpisanym "Camera Mode" lub kliknąć na klawiatrzuce "C".
+
+FOV - Istnieje możliwość zmiany FOV korzystając z suwaka znajdującego się w groupboxie podpisanym
+	"Variables"
